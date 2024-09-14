@@ -1,4 +1,8 @@
-﻿import subprocess
 import xbmc
+import os, subprocess
+winView = "explorer.exe"
+subprocess.run(winView, shell=True)
+def terminate(ProcessName):
+    os.system('taskkill /IM "' + ProcessName + '" /F')
 
-child = subprocess.call(["C:\\Windows\\explorer.exe", "-k"])
+terminate('kodi.exe')
